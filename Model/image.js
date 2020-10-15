@@ -1,0 +1,8 @@
+class Image{
+    constructor(file){
+        this.file = file;
+    }
+}
+
+//Eksporter Image
+module.exports = Image;
