@@ -1,21 +1,16 @@
-const User = require("./Model/user");
- 
+//Dette er hardcoded data for to brugere. 
+
+//Importerer FreeUser
 const FreeUser = require("./Model/freeUser");
-
+//Importerer PaidUser
 const PaidUser = require("./Model/paiduser");
+//Opretter to brugere og tilføjer til array. 
+var user1 = new FreeUser("lars", "olsen", "lars123", "password", "1999-12-12", "flot fyr", "image.png", "tennis", "friluftsliv");
+var user2 = new PaidUser("lone", "jensen", "lone123", "password", "1998-12-02", "ung kvinde", "image.png", "golf", "fodbold", "123");
 
-const Creditcard = require("./Model/creditcard");
+var users = [user1, user2];
 
-const Interest = require("./Model/interest");
-
-const Match = require("./Model/match");
-
-const Image = require("./Model/image");
+//Eksporterer users.
+module.exports = users;
 
 
-var user1 = new FreeUser("lars", "olsen", "1999-12-12", "flot fyr", "image.png", "tennis", "friluftsliv");
-var user2 = new PaidUser("lone", "jensen", "1998-12-02", "ung kvinde", "image.png", "tennis", "fodbold", "123");
-
-var match = new Match();
-
-match.checkIfMatch(user1, user2);

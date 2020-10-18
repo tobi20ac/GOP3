@@ -1,3 +1,4 @@
+//Klasse for et kreditkort.
 class Creditcard{
     constructor(cardNmb){
         this.creditcardNumber = cardNmb;

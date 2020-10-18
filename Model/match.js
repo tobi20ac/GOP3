@@ -1,10 +1,10 @@
+//Klasse for match. Indeholder en metode, der tager to brugere og undersøger om de har to ens
+// interesser. Returnerer true, hvis de har og false hvis ikke. 
 class Match {
     constructor(){}
     
-    checkIfMatch = function(user1, user2){
+    checkIfMatch(user1, user2){
         var match = false;
-        //let string1 = user1.interests.join(",");
-        //let string2 = user2.interests.join(",");
 
         var u1Inte = user1.interests.array;
         var u2Inte = user2.interests.array;

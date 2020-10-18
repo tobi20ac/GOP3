@@ -1,14 +1,19 @@
-
 //Importerer Interest
 const Interest = require("./interest");
 
+//Importerer Image.
+const Image = require("./image");
+
+//Klasse der repræsenterer en User. 
 class User{
-    constructor(firstName, lastName, birthday, description, image, interest1, interest2){
+    constructor(firstName, lastName, username, password, birthday, description, image, interest1, interest2){
         this.firstName = firstName;
         this.lastName = lastName; 
+        this.username = username;
+        this.password = password;
         this.birthday = birthday;
         this.description = description;
-        this.image = image;
+        this.image = new Image(image);
         this.interests = new Interest(interest1, interest2);
     }
 }

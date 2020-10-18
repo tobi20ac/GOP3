@@ -1,13 +1,29 @@
+//Gemmer express librabry som variabel. 
 const express = require("express");
+//initialiserer express server og opretter en variabel for porten. 
+const server = express();
 
-const app = express();
+const PORT = 4001; 
 
-const PORT = 3000; 
+//Henter controllers fra de respektive stier.
+const userController = require("../Controller/userController");
 
-app.get("/", function(res, req){
-    res.status(200).send("Hello world");
-});
+const loginController = require("../Controller/loginController");
 
-app.listen(PORT, function(){
+const matchController = require("../Controller/matchController");
+
+const addInterestController = require("../Controller/addInterestController");
+
+//Læser endpoints på de forskellige routes. 
+server.get('/', userController);
+
+server.post('/login', loginController)
+
+server.post("/match", matchController);
+
+server.post("/addInterest", addInterestController);
+
+//Server bliver aktiveret. 
+server.listen(PORT, function(){
     console.log("Server is running on PORT", PORT);
 });
