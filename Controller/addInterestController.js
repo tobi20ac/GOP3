@@ -6,7 +6,7 @@ const users = require("../HardcodedData");
 //opretter variablen som kunne være et eksempel på hvad en bruger vil tilføje
 var newInterest = "Havearbejde";
 
-//Funktion der tilføjer interessen.
+//Funktion der tilføjer interessen til en brugers array af interesser.
 function addInterestController(req, res) {
     var user = users[0];
     //Tjekker om interessen allerede er registreret
